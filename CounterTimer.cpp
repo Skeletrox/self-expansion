@@ -1,3 +1,9 @@
+/*Counter and timer. Set the number of times you want to say the mantra.
+After each iteration, press any key and the computer beeps, the counter increments and is displayed on the screen.
+Once you hit the limit, a long beep will tell you you are done!
+Then the program displays the amount of time an average iteration tok [so you can tell your father you weren't saying too fast :p].
+*/
+
 #include <iostream>
 #include <conio.h>
 #include <time.h>
@@ -29,6 +35,7 @@ int main()
     avg = (double) difftime(finish, start)/MAX;
     cout << "\nMax value achieved\n";
     Beep(1900, 750);
-    cout << "\nAverage time per iteration is \t" << avg << " seconds" << endl;    getch();
+    cout << "\nAverage time per iteration is \t" << avg << " seconds" << endl;
+    getch();
     return 0;
 }
