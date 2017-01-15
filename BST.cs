@@ -1,4 +1,5 @@
-﻿using System;
+//Implements BST construction using C#
+using System;
 
 namespace BST
 {
